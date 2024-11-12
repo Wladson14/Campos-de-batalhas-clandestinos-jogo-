@@ -1,3 +1,5 @@
+--ServerScriptService
+
 -- Obtém o serviço ReplicatedStorage para acessar objetos compartilhados entre o cliente e o servidor
 local rs = game:GetService('ReplicatedStorage')
 
