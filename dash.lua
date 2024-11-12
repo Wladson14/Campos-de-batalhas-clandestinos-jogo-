@@ -1,3 +1,6 @@
+--StarterGui --> ScreenGui
+
+
 -- Obtém os serviços necessários
 local players = game:GetService('Players')
 local uis = game:GetService('UserInputService')
