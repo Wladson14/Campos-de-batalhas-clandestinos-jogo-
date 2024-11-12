@@ -1,3 +1,5 @@
+--StarterGui --> ScreenGui
+
 -- Obtém o serviço "ContextActionService" para gerenciar ações do jogador
 local cas = game:GetService("ContextActionService")
 -- Obtém o serviço "ReplicatedStorage" para acessar objetos que são compartilhados entre o cliente e o servidor
