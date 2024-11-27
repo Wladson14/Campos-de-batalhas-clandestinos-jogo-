@@ -1,0 +1,15 @@
+local EventQ = game:GetService("ReplicatedStorage") .Remotes.EventQ
+game:GetService("Players") .PlayerAdded:Connect(
+	function(player)  
+		local cooldown = Instance.new("NumberValue")
+		cooldown.Value = tick()
+		cooldown.Name = "Cooldown"
+		cooldown.Parent = player
+	end)
+
+EventQ.OnServerEvent:Connect(function(player,cooldown)
+	if tick() - player.Cooldown.Value > cooldown then
+		--aqui botamos o codigo da animaçao
+		player.Cooldown.Value = tick()
+	end
+end)
