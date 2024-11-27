@@ -1,0 +1,14 @@
+local UIS = game:GetService("UserInputService")
+local hotkey = Enum.KeyCode.Q
+local cooldown = 10
+local event = game:GetService("ReplicatedStorage") .Remotes.EventQ
+
+local player = game:GetService("Players") .LocalPlayer
+
+UIS.InputBegan:Connect(function(input)
+	if input.KeyCode == hotkey then
+		if tick() - player.Cooldown.Value > cooldown then
+			event:FireServer(cooldown)
+		end
+	end
+end)
