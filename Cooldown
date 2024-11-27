@@ -1,0 +1,13 @@
+local player = game:GetService("Players" ) .LocalPlayer
+local value = player:WaitForChild("Cooldown")
+local gui = script.Parent
+
+local cooldown = 10
+
+while wait(0.3)  do
+	local last = tick() - value.Value
+	if last > cooldown then last cooldown end
+	
+	local change = 1 -(last/cooldown)
+	gui:TweenSize(UDim2.new(1,0,change,0),"In","Linear",0.3)
+end
