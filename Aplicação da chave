@@ -1,8 +1,9 @@
+--atribuindo a chave de ativação do dash
 local UIS = game:GetService("UserInputService")
 local hotkey = Enum.KeyCode.Q
 local cooldown = 10
 local event = game:GetService("ReplicatedStorage") .Remotes.EventQ
-
+--aplicando no serviço do player
 local player = game:GetService("Players") .LocalPlayer
 
 UIS.InputBegan:Connect(function(input)
